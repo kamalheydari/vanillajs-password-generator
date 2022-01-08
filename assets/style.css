@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: none;
+  background: none;
+}
+
+:root {
+  --primary: #181820;
+  --secondary: #21212b;
+  --text-clr: #bcbcbf;
+  --red-clr: #e41638;
+  --green-clr: #11db11;
+}
+
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-color: var(--primary);
+  color: var(--text-clr);
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  width: 100vw;
+  padding: 0 2rem;
+}
+html {
+  font-size: 0.625rem;
+}
+@media (min-width: 576px) {
+  html {
+    font-size: 0.675rem;
+  }
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 0.687rem;
+  }
+}
+
+h1 {
+  font-size: 4rem;
+  text-align: center;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+label {
+  font-size: 1.8rem;
+}
+
+.wrapper {
+  padding: 3rem 2rem;
+  background: var(--secondary);
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: min(50rem, 100%);
+  border-radius: 1rem;
+  box-shadow: 0 0 0.5rem 0rem #00000077;
+}
+
+#password-display {
+  border-radius: 1rem;
+  background: var(--primary);
+  padding: 1.5rem 2rem;
+  width: min(100%, 45rem);
+  word-break: break-all;
+}
+
+#password {
+  position: relative;
+}
+#password-icon {
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  right: 2rem;
+  bottom: 1rem;
+  cursor: pointer;
+}
+
+#password-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.form-control:not(:first-of-type) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+input[type="checkbox"] {
+  height: 2.2rem;
+  width: 2.2rem;
+}
+
+.form-control:first-of-type label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+.form-control:first-of-type div {
+  display: flex;
+  justify-content: space-between;
+}
+.form-control:first-of-type input[type="number"] {
+  color: var(--text-clr);
+  font-size: 1.8rem;
+  width: 6rem;
+}
+
+#password-form button {
+  padding: 1rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  background: var(--red-clr);
+  transition: 0.3s;
+  color: var(--text-clr);
+  font-size: 1.8rem;
+}
+#password-form button:hover {
+  color: var(--primary);
+  background: var(--green-clr);
+}

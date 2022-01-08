@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <title>Password Generator</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1 class="title">Password Generator</h1>
+      <div id="password">
+        <h3 id="password-display">Password</h3>
+        <div id="password-icon">
+          <img src="./assets/copy-solid.svg" alt="copy" title="copy!" />
+        </div>
+      </div>
+      <form id="password-form">
+        <div class="form-control">
+          <label for="number-char-amount">Number of Characters</label>
+          <div>
+            <input type="range" id="range-char" min="1" max="100" value="4" />
+            <input type="number" id="number-char" min="1" max="100" value="4" />
+          </div>
+        </div>
+
+        <div class="form-control">
+          <label for="numbers">Numbers</label>
+          <input type="checkbox" id="numbers" />
+        </div>
+
+        <div class="form-control">
+          <label for="symbols">Symbols</label>
+          <input type="checkbox" id="symbols" />
+        </div>
+
+        <div class="form-control">
+          <label for="uppercase">Uppercase</label>
+          <input type="checkbox" id="uppercase" />
+        </div>
+
+        <button type="submit">Generate Password</button>
+      </form>
+    </div>
+    <!-- ----------------------- -->
+    <!-- JS File -->
+    <script src="./assets/app.js"></script>
+  </body>
+</html>
